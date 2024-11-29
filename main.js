@@ -9,9 +9,12 @@ const pickup = $('.pickup')
 const pickuptarger = $('.popularitems')
 const fdslocation = $$('.fd')
 const deliverytarget = $('.processtobuy')
+const backToTopButton = $('#backToTop')
 const dishs = $('.dishs')
 const nav = $('.nav')
-
+const nd = $('.nd')
+const qs = $$('.question')
+const numberTym = $('#number-tym')
 const fastfood = {
     foods : [{
         name: "Baked Chicken Wings and Legs",
@@ -77,6 +80,8 @@ const fastfood = {
         window.location.href =link;
     },
     render : function (category = "All Category"){
+        _this=this
+        let number=  parseInt(numberTym.innerHTML)
         dishs.innerHTML= null
         this.foods.forEach(food =>{
             if (category == "All Category") {
@@ -107,7 +112,7 @@ const fastfood = {
                 <div class="saleoff">
                     <span>${food.saleOff}% Off</span>
                 </div>
-                <div class="likefood">
+                <div class="likefood" >
                     <i class="far fa-heart"></i>
                 </div>
                 <img src=${food.image} alt="food">
@@ -125,6 +130,27 @@ const fastfood = {
             }
             
         })
+        const buttons =  document.querySelectorAll('.likefood') 
+       
+      
+       
+        buttons.forEach(button =>{
+       
+            button.addEventListener('click',()=>{
+                if(button.classList.contains('tym')){
+                   
+                  
+                    _this.updateTym(number--)
+                }
+                button.classList.toggle('tym')
+                _this.updateTym(number++)
+            })
+        }
+        )
+        
+    },
+    updateTym : function(number){
+        numberTym.innerHTML = number
         
     },
     scrolling: function () {
@@ -146,9 +172,18 @@ const fastfood = {
             if (scrollY > 150 && !isFixed) {
                 isFixed = true; // Đánh dấu trạng thái đã fixed
                 nav.classList.add('fixed'); // Thêm class để chuyển sang fixed
+                
+                backToTopButton.style.display = "block";
+                backToTopButton.addEventListener("click", function() {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth" // Cuộn mượt mà
+                    });
+                  });
             } else if (scrollY <= 150 && isFixed) {
                 isFixed = false; // Đánh dấu trạng thái quay về ban đầu
                 nav.classList.remove('fixed'); // Loại bỏ class fixed khi cuộn lên
+                backToTopButton.style.display = "none";
             }
         };
 
@@ -169,7 +204,27 @@ const fastfood = {
                 behavior :'smooth',
                 block:'start'
             })
-        })
+        });
+        // xu ly khi tym 
+        
+        // xu ly khi nhan vao cac cau hoi thuong gap 
+        qs.forEach(q => {
+            q.addEventListener('click', function() {
+                // Kiểm tra nếu phần tử đã có lớp 'active'
+                if (q.classList.contains('open')) {
+                    q.classList.remove('open')
+                } else {
+                    qs.forEach(item => {
+                        item.classList.remove('open');
+                    });
+                    q.classList.toggle('open');
+                }
+        
+                
+            });
+        });
+        
+        
         // xu ly khi nhan nut login 
         pagelogin.onclick = this.gotopage.bind(this, "login.html")
 

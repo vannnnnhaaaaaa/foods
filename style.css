@@ -11,6 +11,21 @@ li {
 a {
     text-decoration: none;
 }
+/* button back to top */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c23564;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    width: 40px;
+    border-radius: 20px;
+    display: none;
+    cursor: pointer;
+  }
 /* main menu */
 .nav {
 
@@ -469,10 +484,14 @@ a {
     align-items: center;
     color: #f01543;
     border-radius: 50%;
-    top:10px ;
+    top: 10px;
     left: 10px;
-}
-
+  }
+  
+.likefood.tym {
+    background-color: #f01543;
+    color: white;
+  }
 .add {
     font-size: 20px;
     margin-top: 20px;
@@ -564,7 +583,7 @@ a {
 }
 .items {
     display: grid;
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: repeat(5,18%);
     gap: 20px;
     
 }
@@ -579,14 +598,15 @@ a {
     margin-top: 14px;
 }
 .item {
-    display: flex;
+ 
     border-radius: 20px;    
     margin-top: 30px;
 
 }
 .items img {
-   height: 220px;
-   width: auto;
+  width: 200px;
+  height: 160px;
+  margin-left: 20px;
 }
 #item_price {
     font-size: 30px;
@@ -644,13 +664,21 @@ a {
     gap: 10px;
 }
 .question {
-    padding: 20px ;
+    padding: 18px ;
+    margin-left: 10px;
     border-radius: 10px;
     width:80% ;
     background-color: white;
     margin-bottom: 20px;
     position: relative;
+    overflow: hidden;
+    height: 60px;
 }
+.question.open {
+    height: 180px ;
+   
+  }
+  
 .question i {
     position: absolute;
     top : 21px; 
@@ -660,7 +688,8 @@ a {
     font-size: 18px;
 }
 .nd {
-    display: none;
+   margin-top: 40px;
+   font-size: 18px;
 }
 .question :hover #nd {
     display: block;
