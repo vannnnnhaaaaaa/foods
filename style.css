@@ -1,0 +1,785 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* main menu */
+.nav {
+
+    width: 100%;
+    background-color: rgba(5, 15, 46, 0.5);
+    z-index: 1000;
+    opacity: 1; /* Thanh điều hướng sẽ luôn hiển thị */
+    transform: translateY(0); /* Không bị ẩn, luôn ở đầu trang */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Hiệu ứng trượt */
+}
+
+/* Khi cuộn qua 150px, thanh điều hướng sẽ chuyển sang fixed */
+.nav.fixed {
+    position: fixed; /* Chuyển thành fixed khi cuộn */
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1; 
+    animation: slide 1s forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-100%); /* Ban đầu nằm ngoài màn hình */
+    }
+    100% {
+        transform: translateY(0%); /* Kết thúc tại vị trí cố định */
+    }
+}
+
+.mainmenu {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    overflow: visible;
+    width: 80%;
+    margin: auto;
+}
+
+
+.page i {
+    font-size: 13px;
+   
+}
+.mainmenu .brand {
+    font-size: 24px;
+}
+.page {
+    display: flex;
+
+}
+.page li a {
+    color: white;
+}
+.page li::before {
+    content: "";
+    width: 0;
+    position: absolute;
+    height: 2px ;
+    background-color: #f01543;
+    bottom: 1px;
+    left: 0;
+    transition: width 0.6s ease; 
+}
+.page li:hover::before {
+    width: 100%;
+}
+
+.page li {
+    margin: 0px 10px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.mainmenu input[type="text"] {
+    padding: 13px;
+    border-radius: 7px;
+    background-color: #152a35;
+    border: none;
+    color: white;
+}
+.search {
+    position: relative;
+}
+.search i {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    color: white;
+}
+.lovefood , .cart{
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 1px white;
+    width: 50px;
+    display: flex;
+   justify-content: center;
+   background-color: #122833;
+   align-items: center;
+    height: 50px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.lovefood:hover {
+    background-color: #f01543;
+}
+.lovefood:hover span {
+    background-color: white;
+    color: #f01543;
+}
+.cart:hover span {
+    background-color: white;
+    color: #f01543;
+}
+
+.cart:hover {
+    background-color: #f01543;
+}
+.cart span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 13px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #f01543;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease;
+}
+.lovefood span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 13px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #f01543;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease;
+}
+#iconlove_cart {
+    display: flex;
+}
+.login, .signup {
+    padding: 11px 24px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: #0e2b36;
+     transition: all 0.5s ease;
+     cursor: pointer;
+}
+/* -------------- -----------------------------------------------------------*/
+.login:hover {
+    background-color: white;
+    color: #f01543;
+}
+.delivery {
+    background-color: #f01543;
+    color: white;
+}
+.signup:hover {
+    background-color: #f01543;
+}
+.delivery:hover {
+    background-color: white;
+    color:#f01543;
+}
+.pickup:hover {
+    background-color: #f01543;
+    color: white;
+}
+.inrestaurant:hover {
+    background-color: #f01543;
+    color: white;
+}
+.pickup:hover span{
+    animation: MoveScaleUpInitial 0.2s forwards, MoveScaleUpEnd 0.2s forwards 0.2s;
+}
+.inrestaurant:hover span{
+    animation: MoveScaleUpInitial 0.2s forwards, MoveScaleUpEnd 0.2s forwards 0.2s;
+}
+.delivery:hover span {
+    animation: MoveScaleUpInitial 0.2s forwards, MoveScaleUpEnd 0.2s forwards 0.2s;
+}
+.login:hover span {
+    animation: MoveScaleUpInitial 0.2s forwards, MoveScaleUpEnd 0.2s forwards 0.2s;
+}
+.signup:hover span {
+    animation: MoveScaleUpInitial 0.2s forwards, MoveScaleUpEnd 0.2s forwards 0.2s;
+}
+
+.delivery span {
+    position: relative;
+    z-index: 10; /* Đặt span trên cùng */
+}
+.pickup span {
+    position: relative;
+    z-index: 10; /* Đặt span trên cùng */
+}
+.inrestaurant span {
+    position: relative;
+    z-index: 10; /* Đặt span trên cùng */
+}
+.login span {
+    display: block;
+    position: relative;
+    z-index: 10; /* Đặt span trên cùng */
+}
+.signup span {
+    display: block;
+    position: relative;
+    z-index: 10; /* Đặt span trên cùng */
+}
+
+
+@keyframes MoveScaleUpInitial {
+    to {
+        transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+        opacity: 0; /* Làm cho chữ biến mất */
+    }
+}
+
+@keyframes MoveScaleUpEnd {
+    from {
+        transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+        opacity: 0; /* Làm cho chữ xuất hiện từ dưới lên */
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+/* -------------- ------------------------------------------------------------------------*/
+.signup:hover {
+    background-color: #f01543;
+}
+.button--calypso:hover span {
+    animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+}
+
+.login {
+    background-color: #f01543;
+    transition: all 0.5s ease;
+}
+.main {
+    height: 1000px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.content {
+   
+    margin-left: 10%;
+    width: 600px;
+    font-size: 35px;
+}
+
+/* mau khi hover #f01543 */
+
+/* content  */
+.order {
+    margin-top: 80px;
+    background-color: white;
+    height: 100px;
+    border-radius: 10px;
+    width: 650px;
+    display: flex;
+    color: #f01543;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    
+}
+.delivery , .pickup , .inrestaurant{
+    padding: 17px;
+    border: 1px solid #f01543 ;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.content i {
+    font-size: 30px;
+}
+.content span{
+    font-size:  30px; ;
+}
+/* category */
+.foods {
+    margin: 60px 0px;
+    background-color: #fffefe;
+}
+.category {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.food {
+    padding: 20px 30px;
+    background-color: #f4f4f6;
+    width: 24%;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+.food::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #f01543;
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease;
+    border-radius:20px ;
+    
+}
+
+
+.food:hover  {
+    color: white;
+}
+.food:hover i {
+    background-color: #d81440;
+}
+.food:hover::before {
+    width: 100%;
+}
+#quantity {
+    position: absolute;
+    top : 50px;
+    left: 100px;
+    font-size: 20px;
+}
+.food p {
+    z-index: 2;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    margin-left: 17px;
+    margin-top:5px;
+    font-size: 28px;
+
+}
+.food i {
+    z-index: 2;
+    
+    font-size: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.include {
+
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.include img {
+    width: 48%;
+    height: auto;
+}
+.foodlocation li {
+    margin: 5 3px ;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius:10px;
+}
+.foodlocation  {
+    
+    display: flex;
+    width: fit-content;
+    margin: 30px auto; 
+    border: 1px solid #fde8ed;
+    border-radius: 10px;
+    position: relative;
+}
+.line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 145px;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+ 
+  }
+
+
+.fd {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.fd:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+}
+.fd.active{
+    opacity: 1;
+}
+
+.dish img {
+    width: 100%;
+    height: auto;
+}
+.dish {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}   
+.dishs {
+
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    gap: 20px;
+}
+
+#price {
+    margin-left: 20px;
+    font-size: 26px;
+    color: #f01543;
+}
+.container {
+    padding: 10px 15px;
+}
+.saleoff {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    top :10px; 
+    border-radius: 10px;
+    padding: 10px 12px;
+    right: 20px;
+    background-color: black;
+}
+.likefood {
+    position: absolute;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f01543;
+    border-radius: 50%;
+    top:10px ;
+    left: 10px;
+}
+
+.add {
+    font-size: 20px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #efdbe1;
+    background-color: white;
+    border-radius: 10px;
+    position: relative; /* Để z-index có tác dụng */
+    cursor: pointer;
+    z-index: 1; /* Giữ z-index cao cho nút */
+}
+.add:hover {
+    color: white;
+}
+.add::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0; /* Đặt ở đáy của nút */
+    border-radius: 10px;
+    left: 0;
+    height: 0%;
+    background-color: #d81440;
+    transition: all 0.5s ease;
+    z-index: -1; /* Đặt z-index thấp hơn để nằm dưới */
+}
+
+.add:hover::before {
+    height: 100%; /* Khi hover, chiều cao sẽ mở rộng đầy đủ */
+}
+
+
+
+.allfood {
+    margin-top: 30px;
+    text-align: center;
+}
+#browserall{
+    padding: 16px 26px;
+    background-color: #f01543;
+    border: 1px solid #f01543;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+/* ----------------------------------------------------- */
+.processtobuy{
+    display: flex;
+    background-color: #000929;
+    color: white;
+    padding: 40px 0px;
+}
+.process {
+    margin-left: 60px;
+    
+}
+.process h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.processing {
+    margin-top: 10px;
+    
+}
+.box {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #161f3c;
+    width: 500px;
+    margin-top: 20px;
+    padding: 18px 22px;
+}
+.box span {
+    font-size: 30px;
+}
+.box i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 24px;
+    width: 60px;
+    border-radius: 10px;
+    height: 60px;
+    background-color: #262e49;
+}
+.items {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    gap: 20px;
+    
+}
+.itemcontent {
+    padding: 15px ;
+}
+.itemcontent h3 {
+    font-size: 24px;
+}
+.itemcontent p {
+    font-size: 17px;
+    margin-top: 14px;
+}
+.item {
+    display: flex;
+    border-radius: 20px;    
+    margin-top: 30px;
+
+}
+.items img {
+   height: 220px;
+   width: auto;
+}
+#item_price {
+    font-size: 30px;
+    margin-right: 20px;
+}
+.priceadd {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+/* ---------------------------- */
+.feedback {
+    margin: 50px 0px;
+    padding: 30px 0px;
+    background-color: #000929;
+    color: #ffffff;
+}
+.feedback h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0px;
+}
+.comments p {
+    color: #5b607a;
+}
+
+.comments {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(3, 29%);
+    gap: 60px;
+}
+.personal{
+    margin-top: 40px;
+    display: flex;
+   
+}
+#avatar{
+    height: 100px;
+    width: auto;
+}
+.info {
+    margin: 10px 25px;
+}
+/* cau hoi thuong gap */
+.questions {
+    background-color: #f7f7f7;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    gap: 10px;
+}
+.question {
+    padding: 20px ;
+    border-radius: 10px;
+    width:80% ;
+    background-color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+.question i {
+    position: absolute;
+    top : 21px; 
+    right: 24px;
+}
+.question span {
+    font-size: 18px;
+}
+.nd {
+    display: none;
+}
+.question :hover #nd {
+    display: block;
+    background-color: #000929;
+}
+/* -------------------------------- */
+.download {
+    background: linear-gradient(to right, #8050c2, #685594,#7a2c67);
+    color: white;
+    margin-bottom: 40px;
+}
+.noidung {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(2,43%);
+    gap: 20px;
+}
+.appdownload {
+    padding: 50px 0px;
+}
+.appdownload h1 {
+    font-size: 43px;
+    margin-bottom: 30px;
+}
+.appdownload p {
+    padding-right:100px;
+    line-height: 1.7;
+    font-size: 19px;
+}
+.ggplay1  {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color:#ffffff ;
+    border-radius: 50px;
+    padding: 4px 16px;
+    color: #000929;
+    cursor: pointer;
+    width: 180px;
+    margin-right: 20px;
+}
+.ggplay2  {
+    cursor: pointer;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    background-color:#0b0a0f ;
+    border-radius: 50px;
+    padding: 4px 16px;
+    color: white;
+}
+.ggplay {
+    margin-top: 40px;
+    display: flex;
+}
+/*  --------------------------------------*/
+footer {
+    color: white;
+    padding: 50px 10%;
+    background-color: #050f2e;
+    display: flex;
+}
+.block1 {
+    margin-top: 4px;
+    font-size: large;
+    flex: 2;
+}
+.iconfooter {
+    color: #747681;
+    background-color: #19213e;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    height: 30px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.blockicon {
+    margin-top: 20px;
+    display: flex;
+}
+.block2 {
+    flex: 1;
+    line-height: 1.5;
+    font-size: large;
+}
+.block3 {
+    flex: 1.3;
+    line-height: 1.5;
+    font-size: large;
+}
+.block4 {
+    flex:1.8;
+    position: relative;
+}
+.fa-envelope {
+    position: absolute;
+    left: 23px;
+    top: 43px;
+}
+.block4 img {
+    margin-right: 5px;
+    margin-top: 20px;
+    cu
+}
+.block4 input[type="text"] {
+    padding: 12px 60px;
+    border-radius: 9px;
+    background-color: #323a54;
+    width: 240px;
+    border: 1px solid #323a54;
+}
+.block4 input[type ="submit"]{
+    background-color: #f01543;
+    padding: 14px 24px;
+    border-radius: 10px;
+    color: white;
+}
+footer a {
+    color: white;
+}

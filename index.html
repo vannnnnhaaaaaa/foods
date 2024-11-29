@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  
+    
+    <!-- cai menu ben tren -->
+
+    <div class="main" style="background-image: url(image/background1.jpg);">
+        <header class="nav">
+            <section class="mainmenu" >
+                <div class="brand" style="color: #f01543;">
+                    <i class="fas fa-envelope-open-text" style="font-size: 25px;"></i>
+                    <span style="font-size: 34px;">Fast food</span>
+                </div>
+                <ul class="page">
+                    <li><a href="">Home <i class="fas fa-chevron-down"></i> </a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Pages <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="">User Dashboard</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Search....." id="sreach"><a href=""><i class="fas fa-search"></i></a> 
+                </div>
+                <section id="iconlove_cart">
+                    <div class="lovefood" style="margin-right: 10px;">
+                        <i class="far fa-heart"></i>
+                        <span>0</span>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>0</span>
+                    </div>
+                </section>
+               
+                <div class="login" >
+                    <span>Log In</span>
+                </div>
+                <div class="signup">
+                    <span>Sign Up</span>
+                </div>
+            </section>
+        </header>
+       <div class="content">
+         <h1>Pizza Perfection, Right at Home</h1>
+         <h1 style="color: #f01543;">Reservations</h1>
+         <p style="font-size: 30px;">Reservation is a step into a world of gastronomic wonder.
+             Reserve your table today and let us paint your culinary dreams into reality.</p>
+
+        <div class="order">
+            <div class="delivery" >
+                <i class="fas fa-truck"></i>
+                <span>Deleviry</span>
+            </div>
+            <div class="pickup">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Pick up</span>
+            </div>
+            <div class="inrestaurant">
+                <i class="fas fa-concierge-bell"></i>
+                <span>In Restaurant</span>
+            </div>
+        </div>
+       </div>
+    </div>
+    <!-- mấy cái món ăn mà phải load lại dữ liệu -->
+    <div class="foods" >
+        <h1 style="margin-left: 10%; font-size: 40px;">Our Categories</h1>
+        <div class="category" >
+           
+            <div class="burger food">
+                <i class="fas fa-hamburger"></i>
+                <p>Delish Burger</p>
+                <span id="quantity">25 item</span>
+            </div>
+            <div class="sandwiches food">
+                <i class="fas fa-hotdog"></i>
+                <p>Hot dog</p>
+                <span id="quantity">25 item</span>
+            </div>
+            <div class="piza food">
+                <i class="fas fa-pizza-slice"></i>
+                <p>Pizzar</p>
+                <span id="quantity">25 item</span>
+            </div>
+            <div class="water food">
+                <i class="fas fa-glass-martini"></i>
+                <p>Delish Burger</p>
+                <span id="quantity">25 item</span>
+            </div>
+        </div>
+
+        <div class="include" >
+            <img src="image/anh1.png" alt="">
+            <img src="image/anh2.png" alt="">
+        </div>
+
+        <h1 style="text-align: center;font-size: 40px;">Some Traditional Food <br> Based on Location</h1>
+
+        <ul class="foodlocation">
+            <li class="fd active">All Category</li>
+            <li class="fd">Thai Cuisine</li>
+            <li class="fd">Mexican</li>
+            <li class="fd">Italian</li>
+            <li class="fd">Vegetarian</li>
+            <li class="fd">Junk Food</li>
+            <div class="line"></div>
+        </ul>
+       
+        <div class="dishs" style="width: 80%;">
+            <div class="dish">
+                <div class="saleoff">
+                    <span>20% Off</span>
+                </div>
+                <div class="likefood">
+                    <i class="far fa-heart"></i>
+                </div>
+                <img src="image/anh4.png" alt="">
+                <p id="price">$30.00</p>
+                <hr>
+                <div class="container">
+                    <h2>Baked Chicken Wings and Legs</h2>
+                    <p><i class="fas fa-check-circle"></i>  4 Piece Chicken</p>
+                    <p><i class="fas fa-check-circle"></i>  Spicy Sauce</p>
+                    <button class="add1"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+                </div>
+               
+            </div>
+           
+            
+        </div>
+        <div class="allfood">
+            <button id="browserall"><b>Browser All</b></button>
+        </div>
+        
+    </div>
+    <!-- quá trình đặt mua hàng (ko cần gì liệu gì) -->
+    <div class="processtobuy">
+        <div class="image_location">
+            <img src="image/process-themb.png" style="margin-right: 30px;" alt="">
+        </div>
+       <div class="process">
+            <h2>The Process of Crafting your Dining Experience</h2>
+            <div class="processing">
+                <div class="box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="boxcontent">
+                        <span>Set your location</span>
+                        <p>A high quality solution beautifully food for customers</p>
+                    </div>
+                   
+                </div>
+                <div class="box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="boxcontent">
+                        <span>Select Food</span>
+                        <p>A high quality solution beautifully food for customers</p>
+                    </div>
+                   
+                </div>
+                <div class="box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="boxcontent">
+                        <span>Pay Cash or Online</span>
+                        <p>Providing an upscale and elegant ambiance for ...  </p>
+                    </div>
+                   
+                </div>
+                <div class="box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="boxcontent">
+                        <span>Delivery or Pickup</span>
+                        <p>Allowing customers to easily book tables through </p>
+                    </div>
+                   
+                </div>
+                
+            </div>
+       </div>
+        
+    </div>
+    <!-- những món ăn phổ biến cũng cần đổ dữ liệu -->
+    <div class="popularitems">
+        <h2 style="margin: 40px 20px 40px 10% ;font-size: 40px;" >Most Popular Items</h2>
+        <div class="items" style="width: 80%; margin: auto;">
+            
+            <div class="item">
+                <img src="image/popular-1.png" alt="">
+                <div class="itemcontent">
+                    <h3>Quinoa-Stuffed Bell Pepper</h3>
+                    <p><i class="far fa-check-circle"></i> 4 Paces Chicken</p>
+                    <p><i class="far fa-check-circle"></i> Spicy Sauce</p>
+                    <hr style="margin: 10px 0px;">
+                    <div class="priceadd">
+                        <p id="item_price">$20</p>
+                        <button class="add"><i class="fas fa-cart-plus"></i>   Add to Cart</button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/popular-6.png" alt="">
+                <div class="itemcontent">
+                    <h3>Quinoa-Stuffed Bell Pepper</h3>
+                    <p><i class="far fa-check-circle"></i> 4 Paces Chicken</p>
+                    <p><i class="far fa-check-circle"></i> Spicy Sauce</p>
+                    <hr style="margin: 10px 0px;">
+                    <div class="priceadd">
+                        <p id="item_price">$20</p>
+                        <button class="add"><i class="fas fa-cart-plus"></i>   Add to Cart</button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/popular-2.png" alt="">
+                <div class="itemcontent">
+                    <h3>Quinoa-Stuffed Bell Pepper</h3>
+                    <p><i class="far fa-check-circle"></i> 4 Paces Chicken</p>
+                    <p><i class="far fa-check-circle"></i> Spicy Sauce</p>
+                    <hr style="margin: 10px 0px;">
+                    <div class="priceadd">
+                        <p id="item_price">$20</p>
+                        <button class="add"><i class="fas fa-cart-plus"></i>   Add to Cart</button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/popular-3.png" alt="">
+                <div class="itemcontent">
+                    <h3>Quinoa-Stuffed Bell Pepper</h3>
+                    <p><i class="far fa-check-circle"></i> 4 Paces Chicken</p>
+                    <p><i class="far fa-check-circle"></i> Spicy Sauce</p>
+                    <hr style="margin: 10px 0px;">
+                    <div class="priceadd">
+                        <p id="item_price">$20</p>
+                        <button class="add"><i class="fas fa-cart-plus"></i>   Add to Cart</button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/popular-4.png" alt="">
+                <div class="itemcontent">
+                    <h3>Quinoa-Stuffed Bell Pepper</h3>
+                    <p><i class="far fa-check-circle"></i> 4 Paces Chicken</p>
+                    <p><i class="far fa-check-circle"></i> Spicy Sauce</p>
+                    <hr style="margin: 10px 0px;">
+                    <div class="priceadd">
+                        <p id="item_price">$20</p>
+                        <button class="add"><i class="fas fa-cart-plus"></i>   Add to Cart</button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/popular-5.png" alt="">
+                <div class="itemcontent">
+                    <h3>Quinoa-Stuffed Bell Pepper</h3>
+                    <p><i class="far fa-check-circle"></i> 4 Paces Chicken</p>
+                    <p><i class="far fa-check-circle"></i> Spicy Sauce</p>
+                    <hr style="margin: 10px 0px;">
+                    <div class="priceadd">
+                        <p id="item_price">$20</p>
+                        <button class="add"><i class="fas fa-cart-plus"></i>   Add to Cart</button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- phần đánh giá -->
+    <div class="feedback">
+        <h2>What’s Our Customer Say</h2>
+        <div class="comments">
+            <div class="comment">
+                <p id="writing">"An absolute foodie's paradise! The flavors at 
+                    ReservQ are a symphony of delight. Every bite tells
+                     a story of passion and skill. A must-visit for
+                      anyone seeking beyond compare."</p>
+                <div class="personal">
+                    <img id="avatar" src="image/customer-1.png" alt="">
+                    <div class="info">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <p style="font-size: 30px;">Jonson Roy</p>
+                        <p style="font-size: 18px;">Job Holder</p>
+                    </div>
+                </div>
+              
+
+            </div>
+            <div class="comment">
+                <p id="writing">"An absolute foodie's paradise!
+                     The flavors at ReservQ are a symphony of delight. 
+                     Every bite tells a story of passion and skill.
+                      A must-visit for anyone seeking beyond compare."</p>
+                <div class="personal">
+                    <img id="avatar" src="image/customer-2.png" alt="">
+                    <div class="info">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <p style="font-size: 30px;">Jonson Roy</p>
+                        <p style="font-size: 18px;">Job Holder</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <p id="writing">"An absolute foodie's paradise! The flavors at 
+                    ReservQ are a symphony of delight. Every bite tells
+                     a story of passion and skill. A must-visit for
+                      anyone seeking beyond compare."</p>
+                <div class="personal">
+                    <img id="avatar" src="image/customer-1.png" alt="">
+                    <div class="info">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <p style="font-size: 30px;">Jonson Roy</p>
+                        <p style="font-size: 18px;">Job Holder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cau hoi thuong gap ve am thuc -->
+     <div class="questions">
+        <div class="handle">
+            <h1 style="margin-bottom: 50px;">Foodie FAQ: Your Culinary Queries Answered</h1>
+            <div class="question">
+                <span>What type of cuisine does your restaurant offer? </span>
+                <p class="nd">We offer [insert type of cuisine, e.g., Italian, Asian fusion, Mediterranean] cuisine that combines traditional flavors with modern twists</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="question">
+                <span>Can I make a reservation online?</span>
+                <p class="nd">We offer [insert type of cuisine, e.g., Italian, Asian fusion, Mediterranean] cuisine that combines traditional flavors with modern twists.</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="question">
+                <span>Is there a dress code for dining at your restaurant?</span>
+                <p class="nd">We offer [insert type of cuisine, e.g., Italian, Asian fusion, Mediterranean] cuisine that combines traditional flavors with modern twists.</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="question">
+                <span>Is there a dress code for dining at your restaurant? </span>
+                <p class="nd">We offer [insert type of cuisine, e.g., Italian, Asian fusion, Mediterranean] cuisine that combines traditional flavors with modern twists.</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="pics">
+            <img src="image/faq-1.png" style="width: 59%; height:260px;" alt="">
+            <img src="image/faq-2.png"  style="width: 39%;height:260px;"alt="">
+            <img src="image/faq-3.png" style="width: 45%; height:260px;"  alt="">
+            <img src="image/faq-4.png" style="width: 53%; height:260px;"  alt="">
+        </div>
+     </div>
+     <!-- phần download từ ggplay  -->
+      <div class="download">
+        <div class="noidung">
+            <div class="appdownload">
+                <h1 style="margin-top: 50px;">Find out Better Restaurant Food Experience</h1>
+                <p>We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.</p>
+                <div class="ggplay">
+                    <div class="ggplay1 ">
+                        <img src="image/ggplay1.png" alt="">
+                        <span>Google Play</span>
+                    </div>
+                    <div class="ggplay2">
+                        <img src="image/ggplay2.png" alt="">
+                        <span>Google Play</span>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="imagedownload" style="height: 100%;">
+                <img src="image/restaurant2.png" alt="">
+            </div>
+        </div>
+      </div>
+      <!-- footer de gioi thieu thong tin  -->
+       <footer>
+            <div class="block1">
+                <i style="font-size: 30px; color: #f01543;" class="fas fa-envelope-open-text"></i> 
+                <span style="font-size: 30px;">Fast Food</span>
+                <p style="margin-top: 20px; margin-right: 75px;">At ReservQ, we invite you to embark on a 
+                    journey of taste and delight
+                    .Our tables are more than just places.</p>
+                <div class="blockicon">
+                    <div class="iconfooter fb">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="iconfooter ig">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="iconfooter tw">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="iconfooter yt">
+                       <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="block2">
+                <h2>Quick Link</h2>
+                <a href="#">My Account</a> <br>
+                <a href="#">About Us</a> <br>
+                <a href="#">Store Locator</a> <br>
+                <a href="#">Delivery</a> <br>
+                <a href="#">Pickup</a> 
+               
+            </div>
+            <div class="block3">
+                <h2>Terms & Privacy</h2>
+                <a href="">Trust & Safety</a> <br>
+                <a href="">Terms of Service</a> <br>
+                <a href="">Privacy Policy</a>
+              
+            </div>
+            <div class="block4">
+                <h2>Subscribe our Newsletter</h2>
+                <input type="text" name="" id="" placeholder="Your email">
+                <i class="fas fa-envelope"></i>
+                <input type="submit" name="subcribe" value="Subcribe">
+
+                <p>We accept Payment methods:</p>
+                <img src="https://quomodosoft.com/html/reservq/assets/images/small/Visa.png" style="width: 62px; height: 42px;" alt="">
+                <img src="https://quomodosoft.com/html/reservq/assets/images/small/Amex.png" style="width: 62px; height: 42px;" alt="">
+                <img src="https://quomodosoft.com/html/reservq/assets/images/small/Mastercard.png" style="width: 62px; height: 42px;" alt="">
+                <img src="https://quomodosoft.com/html/reservq/assets/images/small/PayPal.png" style="width: 62px; height: 42px;" alt="">
+                <img src="https://quomodosoft.com/html/reservq/assets/images/small/GooglePay.png" style="width: 62px; height: 42px;" alt="">
+
+
+                
+            </div>
+            
+       </footer>
+    <script src="main.js"></script>
+</body>
+</html>
